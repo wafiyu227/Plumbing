@@ -11,13 +11,31 @@ mobileMenu.querySelectorAll("a").forEach((link) => {
   });
 });
 
-const slides = document.querySelector(".slides");
-const testimonials = document.querySelectorAll(".testimonial");
-let index = 0;
+// Testimonial Slider
+const testimonialsContainer = document.querySelector('.testimonials-container');
+const dots = document.querySelectorAll('.dot');
+let currentIndex = 0;
 
-function showNextTestimonial() {
-  index = (index + 1) % testimonials.length;
-  slides.style.transform = `translateX(-${index * 100}%)`;
+function moveToSlide(index) {
+    testimonialsContainer.style.transform = `translateX(-${index * 100}%)`;
+    
+    // Update active dot
+    dots.forEach(dot => dot.classList.remove('active'));
+    dots[index].classList.add('active');
+    
+    currentIndex = index;
 }
 
-setInterval(showNextTestimonial, 5000); // change every 3 seconds
+// Add click event to dots
+dots.forEach(dot => {
+    dot.addEventListener('click', () => {
+        const index = parseInt(dot.getAttribute('data-index'));
+        moveToSlide(index);
+    });
+});
+
+// Auto slide every 5 seconds
+setInterval(() => {
+    currentIndex = (currentIndex + 1) % dots.length;
+    moveToSlide(currentIndex);
+}, 5000);

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>plumbing website</title>
+    <title>Absolute Plumbing</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,7 +14,7 @@
                 <path d="M7 21v-4a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v4" stroke="#ffd700" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 <rect x="3" y="3" width="18" height="6" rx="3" stroke="#ffd700" stroke-width="2"/>
             </svg>
-            PlumbPro
+            Absolute Plumbing
         </a>
         <ul>
             <li><a href="#home">Home</a></li>
@@ -27,11 +27,12 @@
         <button class="menu-toggle" aria-label="Open Menu">&#9776;</button>
     </nav>
     <ul class="mobile-menu" id="mobileMenu">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#" class="cta">Book Now</a></li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#contact" class="cta">Book Now</a></li>
     </ul>
 
     <section class="hero" id="home">
@@ -94,28 +95,52 @@
       </div>
       </section>
 
-      <div class="testimonial-slider" id="testimonials">
-        <h1>What Our Clients Said About Us</h1>
-        <div class="slides">
-          <div class="testimonial">
-            <img src="/images/close-up-worker-checking-freon-tank.jpg" alt="">
-            <h4>- Sarah</h4>
-            <p>"This service changed my life!"</p>
+      <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+      <div class="container">
+          <div class="section-title">
+              <h2>Customer Testimonials</h2>
+              <p>Don't just take our word for it - see what our satisfied customers have to say.</p>
           </div>
-          <div class="testimonial">
-            <img src="/images/household-repair-middle-aged-man-inspecting-pipe-touching-hand-sink-stylish-modern-kitchen.jpg" alt="">
-            <h4>- Mike</h4>
-            <p>"Highly recommend to anyone needing a boost."</p>
-            
-
+          <div class="testimonials-slider">
+              <div class="testimonials-container">
+                  <div class="testimonial">
+                      <div class="testimonial-content">
+                          FrostFlow responded to our emergency call within an hour when our AC died during the hottest week of summer. Their technician was professional, knowledgeable, and fixed our system quickly. We couldn't be more grateful for their prompt service!
+                      </div>
+                      <div class="testimonial-author">
+                          Sarah Johnson
+                          <span>Residential Customer</span>
+                      </div>
+                  </div>
+                  <div class="testimonial">
+                      <div class="testimonial-content">
+                          We've been using FrostFlow for our office building's HVAC maintenance for over 5 years. Their preventative maintenance program has saved us thousands in potential repairs and downtime. Highly recommended for any business!
+                      </div>
+                      <div class="testimonial-author">
+                          Michael Rodriguez
+                          <span>Office Manager</span>
+                      </div>
+                  </div>
+                  <div class="testimonial">
+                      <div class="testimonial-content">
+                          The energy-efficient system that FrostFlow installed in our home has reduced our utility bills by nearly 30%. The team was clean, courteous, and finished the job ahead of schedule. Outstanding service from start to finish!
+                      </div>
+                      <div class="testimonial-author">
+                          Jennifer Lee
+                          <span>Homeowner</span>
+                      </div>
+                  </div>
+              </div>
+              <div class="slider-dots">
+                  <div class="dot active" data-index="0"></div>
+                  <div class="dot" data-index="1"></div>
+                  <div class="dot" data-index="2"></div>
+              </div>
           </div>
-          <div class="testimonial">
-            <img src="/images/plumbing-professional-doing-his-job.jpg" alt="">
-            <h4>- Aisha</h4>
-            <p>"Exceptional quality and great support!"</p>
-          </div>
-        </div>
       </div>
+  </section>
+
       <section class="about-us" id="about">
         <div class="about-us-image">
           <img src="/images/household-repair-middle-aged-man-inspecting-pipe-touching-hand-sink-stylish-modern-kitchen.jpg" alt="About Us Team Photo">
@@ -140,6 +165,16 @@
           <form action="">
             <input type="text" placeholder="Name">
             <input type="email" placeholder="Email">
+            <input type="phone" placeholder="Phone">
+            <select name="" id="">
+              <option value="">Select a service</option>
+              <option value="">installation</option>
+              <option value="">Emergency Repairs</option>
+              <option value="">Maintenance</option>
+              <option value="">Plumbing Inspection</option>
+              <option value="">Bathroom Renovation</option>
+              <option value="">other</option>
+            </select>
             <textarea name="" id="" cols="30" rows="10" placeholder="Your message..."></textarea>
             <button>Send Message</button>
           </form>
@@ -152,7 +187,7 @@
           <div class="footer-section footer-about">
               <div class="footer-logo">
                   <div class="fa"></div>
-                  <span>FlowMasters</span>
+                  <span>Absolute Plumbing</span>
               </div>
               <p>Professional plumbing services with over 25 years of experience. We provide reliable, high-quality solutions for all your plumbing needs.</p>
               <div class="social-links">
@@ -209,7 +244,7 @@
       </div>
 
       <div class="footer-bottom">
-          <p>&copy; 2025 FlowMasters Plumbing. All Rights Reserved.</p>
+          <p>&copy; 2025 Absolute Plumbing. All Rights Reserved.</p>
       </div>
   </footer>
       
